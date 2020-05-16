@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+}
+
+.logo{
+    width:75%;
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight:700;
+}
+
+#container-band{
+    padding: 50px;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+}
