@@ -59,6 +59,6 @@ Navigate to either your [Local Port](http://localhost:3000) or [Network Port](ht
 ## Creators 🧠
 
 - [Jamie Lau](https://github.com/laujamie)
-- [Jessie Wu](https://github.com/jessie-wu89)
+- [Jessie Wu](https://github.com/jessie-wu22)
 - [Elaine Liu](https://github.com/eliu72)
 - [Edmund Lui](https://github.com/Edmund-Lui98)
