@@ -2,3 +2,5 @@
 DS_STORE
 *.error.log
 credentials.json
+__pycache__
+.env
