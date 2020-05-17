@@ -1,12 +1,91 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
+
+/* if we want background patterns, insert background image*/
+/*
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("background.png");
+  background-attachment: fixed;
+} 
+*/
+
+.parrot-logo {
+  object-fit: cover;
+  padding-left: 32vh;
+  padding-top: 9vh;
+}
+
+.header-image {
+  height: 60vmin;
+  padding-left: 8vh;
+  padding-top: 10vh;
+}
+
+.slogan-subtitle {
+  font-size: 4vh;
+  font-weight: bold;
+  color: black;
+  padding-top: 3vh;
+  padding-left: 38vh;
+  font-family: "Poppins";
+}
+
+.notes-container {
+  width: 62rem;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  margin: 0 auto;
+}
+
+.text-container {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
+}
+
+.buttons-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.record-button {
+  padding-left: 3vh;
+  padding-right: 3vh;
+  color: black;
+  border-radius: 40px;
+  background-color: #fdb952;
+  border-color: #fdb952;
+  font-family: "Poppins";
 }
 
+.stop-button {
+  padding-left: 3vh;
+  padding-right: 3vh;
+  color: black;
+  border-radius: 40px;
+  background-color: #ff5c38;
+  border-color: #ff5c38;
+  font-family: "Poppins";
+}
+
+.btn-info {
+  padding-left: 3vh;
+  padding-right: 3vh;
+  color: white;
+  border-radius: 40px;
+  background-color: #387bff;
+  border-color: #387bff;
+  font-family: "Poppins";
+}
+
+.buttons-row {
+  padding-left: 8vh;
+  padding-right: 8vh;
+}
+
+////////////
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,6 +101,32 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.meeting-mins-text {
+  font-family: "Poppins";
+  text-align: center;
+  padding: 1vh 15vh 1vh;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.attendees-text {
+  font-family: "Poppins";
+  text-align: centre;
+  padding: 0vh 15vh 0vh;
+}
+
+.date-text {
+  font-family: "Poppins";
+  text-align: centre;
+  padding: 3vh 15vh 0vh;
+}
+
+.api-text {
+  font-family: "Poppins";
+  text-align: left;
+  padding: 2vh 15vh 0vh;
 }
 
 .App-link {
