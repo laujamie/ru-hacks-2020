@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactMic } from '@cleandersonlobo/react-mic';
 import PropTypes from 'prop-types';
-import blobToBase64 from '../utils/blobToBase64';
 
 function saveRecording(audioBlob, dispatch) {
   dispatch({ type: 'SET_BLOB', blob: audioBlob });
@@ -18,11 +17,7 @@ const Recorder = ({ record, store, dispatch }) => {
     saveRecording(recordedBlob, dispatch);
   };
 
-  return (
-    <div style={{ display: recording ? 'block' : 'none' }}>
-      <ReactMic record={recording} onStop={onStop} />
-    </div>
-  );
+  return <ReactMic record={recording} onStop={onStop} />;
 };
 
 Recorder.propTypes = {

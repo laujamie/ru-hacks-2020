@@ -1,5 +1,7 @@
-import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import HeaderImage from './header-image.png';
+import Logo from './logo.png';
 
 const Header = () => (
   <div>
@@ -8,7 +10,12 @@ const Header = () => (
         <Row>
           <Col xs={6}>
             <Row>
-              <img src="logo.png" class="parrot-logo" alt="logo" />
+              <img
+                src={Logo}
+                className="parrot-logo"
+                alt="logo"
+                style={{ width: '100%' }}
+              />
             </Row>
             <Row>
               <p className="slogan-subtitle">
@@ -19,7 +26,12 @@ const Header = () => (
           </Col>
 
           <Col xs={6}>
-            <img src="header-image.png" class="header-image" alt="logo" />
+            <img
+              src={HeaderImage}
+              className="header-image"
+              alt="logo"
+              style={{ width: '100%' }}
+            />
           </Col>
         </Row>
       </Container>
