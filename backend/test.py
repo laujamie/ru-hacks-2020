@@ -4,8 +4,6 @@ import io
 import base64
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="parrot.json"
-
 def recognize(audio_string):
     client = speech_v1p1beta1.SpeechClient()
 
