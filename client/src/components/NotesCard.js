@@ -105,7 +105,7 @@ const NotesCard = ({ store, dispatch }) => {
         <p className="api-text">
           {notes ? notes : 'Please record to add notes'}
         </p>
-        {err && (
+        {error && (
           <p className="api-text">An error occurred, please try again.</p>
         )}
       </Card.Body>
