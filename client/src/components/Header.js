@@ -26,12 +26,7 @@ const Header = () => (
           </Col>
 
           <Col xs={6}>
-            <img
-              src={HeaderImage}
-              className="header-image"
-              alt="logo"
-              style={{ width: '100%' }}
-            />
+            <img src={HeaderImage} className="header-image" alt="logo" />
           </Col>
         </Row>
       </Container>
