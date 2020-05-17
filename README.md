@@ -40,8 +40,21 @@ Change directories into the cloned repository:
 $ cd ru-hacks-2020/
 ```
 
-Run the application:
+**then**
 
+Run the back-end application:
+
+```bash
+$ python backend/server.py
+```
+
+**and**
+
+Run the back-end application:
+
+```bash
+$ cd client
+```
 ```bash
 $ yarn start
 ```
