@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import axios from 'axios';
 import Recorder from './Recorder';
+import blobToBase64 from '../utils/blobToBase64';
 
 const NotesCard = ({ store, dispatch }) => {
   const [record, setRecord] = useState(false);
+  const [notes, setNotes] = useState('');
   const startRecording = () => {
     setRecord(true);
   };
@@ -11,8 +14,21 @@ const NotesCard = ({ store, dispatch }) => {
     setRecord(false);
   };
 
+  const sendAudio = (audio) => {
+    axios
+      .get(`${REACT_APP_API_BASE}/audio?audioString=${audio}`)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
-    console.log(store.blob);
+    if (store.blob) {
+      blobToBase64(store.blob.blob, sendAudio);
+    }
   }, [store]);
 
   return (
