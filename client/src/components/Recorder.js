@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReactMic } from 'react-mic';
+import { ReactMic } from '@cleandersonlobo/react-mic';
 import PropTypes from 'prop-types';
 import blobToBase64 from '../utils/blobToBase64';
 

@@ -16,7 +16,11 @@ const NotesCard = ({ store, dispatch }) => {
 
   const sendAudio = (audio) => {
     axios
-      .get(`${REACT_APP_API_BASE}/audio?audioString=${audio}`)
+      .get(`${process.env.REACT_APP_API_BASE}/audio`, {
+        params: {
+          audioString: audio,
+        }
+      })
       .then((res) => {
         console.log(res);
       })
