@@ -23,7 +23,8 @@ const NotesCard = ({ store, dispatch }) => {
         },
       })
       .then((res) => {
-        setNotes(res.body.message);
+        console.log(res);
+        setNotes(res.data.message);
         setError(false);
       })
       .catch((err) => {

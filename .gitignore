@@ -4,3 +4,4 @@ DS_STORE
 credentials.json
 __pycache__
 .env
+requirements.txt

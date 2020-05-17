@@ -1,0 +1,5 @@
+.vscode
+credentials.json
+test
+Pipfile
+Pipfile.lock
