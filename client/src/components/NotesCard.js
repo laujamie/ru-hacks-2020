@@ -1,69 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Button } from 'react-bootstrap';
-import axios from 'axios';
-import Recorder from './Recorder';
-import blobToBase64 from '../utils/blobToBase64';
+import React from "react";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
-const NotesCard = ({ store, dispatch }) => {
-  const [record, setRecord] = useState(false);
-  const [notes, setNotes] = useState('');
-  const startRecording = () => {
-    setRecord(true);
-  };
-  const stopRecording = () => {
-    setRecord(false);
-  };
-
-  const sendAudio = (audio) => {
-    axios
-<<<<<<< HEAD
-      .get(`${process.env.REACT_APP_API_BASE}/audio`, {
-        params: {
-          audioString: audio,
-        }
-      })
-=======
-      .get(`${process.env.REACT_APP_API_BASE}/audio?audioString=${audio}`)
->>>>>>> 6f08562306e252a8d013b62957c0cc9cc99b7afc
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    if (store.blob) {
-      blobToBase64(store.blob.blob, sendAudio);
-    }
-  }, [store]);
-
+const NotesCard = () => {
   return (
-    <Card style={{ width: '60rem' }}>
-      <Card.Header>
-        <Button variant="warning" onClick={startRecording}>
-          record
-        </Button>
-        <Button variant="danger" onClick={stopRecording}>
-          stop
-        </Button>
-        <Button variant="info">copy</Button>
-        <Button variant="info">clear</Button>
-        <Button variant="info">save</Button>
+    <Card style={{ height: "90vh" }} className="text-container">
+      <Card.Header className="buttons-container">
+        <Container>
+          <Row className="buttons-row">
+            <Col>
+              <Button
+                className="record-button"
+                style={{ width: "17vh" }}
+                variant="warning"
+              >
+                record
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                style={{ width: "17vh" }}
+                variant="danger"
+                className="stop-button"
+              >
+                stop
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                style={{ width: "17vh" }}
+                variant="info"
+                className="btn-info"
+              >
+                copy
+              </Button>
+            </Col>
+
+            <Col>
+              <Button
+                style={{ width: "17vh" }}
+                variant="info"
+                className="btn-info"
+              >
+                clear
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                style={{ width: "17vh" }}
+                variant="info"
+                className="btn-info"
+              >
+                save
+              </Button>
+            </Col>
+          </Row>
+        </Container>
       </Card.Header>
-      <Card.Body>
-        <Recorder record={record} store={store} dispatch={dispatch} />
-        <h1>Meeting Minutes</h1>
-        <p>
-          {' '}
-          1. Event Schedule a. Workshops i. Machine Learning ii. Artificial
-          Intelligence b. Meals i. Coffee chat with workshop leaders 2. Brand
-          Management and Marketing a. Social media banners i. Assigned to:
-          Design team b. Promo campaign ii. Assigned to Marketing 3. Attendees
-          a. Registration i. 300 participants ii. 30 Volunteers and mentors iii.
-          5 Speakers{' '}
+      <Card.Body className="meeting-text">
+        <br />
+        <u className="meeting-mins-text">Meeting Minutes</u>
+        <p className="date-text">Date: May 17, 2020</p>
+        <p className="attendees-text">
+          Attendees: Edmund, Elaine, Jamie, Jessie{" "}
         </p>
+        <p className="api-text">**OUTPUT TEXT GOES HERE**</p>
       </Card.Body>
     </Card>
   );
