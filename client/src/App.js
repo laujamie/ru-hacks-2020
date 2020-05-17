@@ -1,12 +1,14 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import React, { useReducer } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
-import { Container, Button, Row, Col } from "react-bootstrap";
-import Header from "./components/Header";
-import NotesCard from "./components/NotesCard";
+import { Container, Button, Row, Col } from 'react-bootstrap';
+import Header from './components/Header';
+import NotesCard from './components/NotesCard';
+import { reducer, initialState } from './stores/store';
 
 function App() {
+  const [store, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
       <div className="wrapper">
@@ -17,7 +19,7 @@ function App() {
                 <Header />
               </div>
               <div className="col-xs-7 notes-container">
-                <NotesCard />
+                <NotesCard store={store} dispatch={dispatch} />
               </div>
             </div>
           </div>

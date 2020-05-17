@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
+import Logo from './logo.png';
 
 const Header = () => (
   <div>
-    <img src="logo.png" class="logo-main" alt="logo" />
+    <img src={Logo} className="logo-main" alt="logo" />
     <p className="title-container__subtitle">
       Collective thinking made simpler.
     </p>
